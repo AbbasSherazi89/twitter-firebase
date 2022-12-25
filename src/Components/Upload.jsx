@@ -4,6 +4,8 @@ import {
   ref,
   uploadBytesResumable,
   getDownloadURL,
+  collection,
+  addDoc
 } from "firebase/storage";
 import { AiFillCamera } from "react-icons/ai";
 const Upload = () => {

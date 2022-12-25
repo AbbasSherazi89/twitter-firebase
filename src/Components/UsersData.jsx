@@ -6,10 +6,12 @@ import { db } from "../firebase";
 const UsersData = (props) => {
     const navigate = useNavigate();
   const [user, setUser] = useState([]);
+  
   const usersCollection = collection(db, "user");
 
   useEffect(() => {
     const getusers = async () => {
+      
       const data = await getDocs(usersCollection);
       setUser(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
     };
